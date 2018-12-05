@@ -18,7 +18,6 @@ jobs:
       heroku_api_token: ((heroku_api_key))
       logzio_token: ((logzio_token))
 
-
 - name: infra
   plan:
   - aggregate:
