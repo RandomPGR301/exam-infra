@@ -4,6 +4,12 @@ resource "heroku_app" "ci" {
   region = "eu"
 }
 
+# Create a hosted graphite, and configure the app to use it
+resource "heroku_addon" "hostedgraphite" {
+  app  = "${heroku_app.ci.name}"
+  plan = "hostedgraphite"
+}
+
 # Create a database, and configure the app to use it
 resource "heroku_addon" "db_ci" {
   app  = "${heroku_app.ci.name}"
@@ -15,6 +21,12 @@ resource "heroku_app" "staging" {
   region = "eu"
 }
 
+# Create a hosted graphite, and configure the app to use it
+resource "heroku_addon" "hostedgraphite" {
+  app  = "${heroku_app.staging.name}"
+  plan = "hostedgraphite"
+}
+
 # Create a database, and configure the app to use it
 resource "heroku_addon" "db_stage" {
   app  = "${heroku_app.staging.name}"
@@ -24,6 +36,12 @@ resource "heroku_addon" "db_stage" {
 resource "heroku_app" "production" {
   name   = "${var.app_prefix}-app-production"
   region = "eu"
+}
+
+# Create a hosted graphite, and configure the app to use it
+resource "heroku_addon" "hostedgraphite" {
+  app  = "${heroku_app.production.name}"
+  plan = "hostedgraphite"
 }
 
 # Create a database, and configure the app to use it
