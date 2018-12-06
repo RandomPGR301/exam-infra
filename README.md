@@ -33,3 +33,6 @@ prøv å kjør applikasjonen/testene pånytt med en gang - og vips så funker de
 miljø (kanskje pga m2-cache eller noe) eller spring-boot oppsettet mitt har jeg ikke lykkes med å finne ut av, 
 men ut fra hva jeg kan se så er ikke dette et problem for pipeline og heroku.
 
+# Andre opplysninger
+Applikasjonen som er levert er hentet fra [spring.io](https://spring.io) sine guider.
+
