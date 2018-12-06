@@ -17,6 +17,7 @@ jobs:
       heroku_email: ((heroku_email))
       heroku_api_token: ((heroku_api_key))
       logzio_token: ((logzio_token))
+      graphite_host: ((graphite_host))
 
 - name: infra
   plan:
