@@ -14,7 +14,6 @@ params:
     heroku_api_token:
     app_name:
     logzio_token:
-    graphite_host:
 
 run:
   path: sh
@@ -30,6 +29,6 @@ run:
           login ${heroku_email}
           password ${heroku_api_token}
       EOF
-      heroku config:set LOGZIO_TOKEN=${logzio_token} GRAPHITE_HOST=${graphite_host} --app ${app_name}
+      heroku config:set LOGZIO_TOKEN=${logzio_token} --app ${app_name}
       git push https://git.heroku.com/${app_name}.git master:refs/heads/master
       
