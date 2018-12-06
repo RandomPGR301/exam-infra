@@ -1,6 +1,5 @@
 # PGR301 - DevOps - Eksamen
 Eksamensoppgaven finnes her: [PGR301-Eksamen](https://github.com/PGR301-2018/oppgave-eksamen)
-I infra-repository sin README skal det går klart frem hvilke oppgaver du har valgt å løse. Andre instruksjoner skal også ligge der.
 
 # Instruksjoner
     1. Fork de inleverte repositoriene, og lag deploy keys for disse.
